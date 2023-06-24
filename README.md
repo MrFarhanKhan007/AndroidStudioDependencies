@@ -7,10 +7,13 @@ dependencies{
 
 . . . 
 
- implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
+// ViewModel
+    
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1" 
+    
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1"
+    
  
- implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1"
-
 }
 
 ## Retrofit
@@ -48,11 +51,14 @@ plugins{
 1) set permission for INTERNET USAGE
 
 <manifest
-   <uses-permission android:name="android.permission.INTERNET" />
 
-2) set the application container name
+   <uses-permission @ndroid:name="android.permission.INTERNET" />  [replace @ with a , and it will be good to go, it wasn't letting me write the android name]
+
+2) set the application name
 
 <application 
+
+// for example application name is AmphibiansApplication and it in ui package, we write it as ->
 
 android:name=".ui.AmphibianApplication"
 
@@ -61,7 +67,9 @@ android:name=".ui.AmphibianApplication"
 /application>
 
 </manifest>
+
 ## Room Library
+
 plugins{
 . . .
 
