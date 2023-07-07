@@ -73,9 +73,12 @@ android:name=".ui.AmphibianApplication"
 plugins{
 . . .
 
- id 'kotlin-kapt'
+ id 'kotlin-kapt' //optional, can use ksp instead of kapt since ksp is faster
  
   id 'com.google.devtools.ksp' version "1.8.21-1.0.11"
+
+  . . .
+  
  }
 
  dependencies{
@@ -87,6 +90,10 @@ plugins{
     
     annotationProcessor "androidx.room:room-compiler:$room_version"
 
+    implementation "androidx.room:room-ktx:$room_version"
+
     // To use Kotlin annotation processing tool (kapt)
     kapt "androidx.room:room-compiler:$room_version"
+    
+    // if you dont wish to use kapt,just use ksp, refer to https://developer.android.com/build/optimize-your-build?utm_source=android-studio#migrate_to_ksp
  }
