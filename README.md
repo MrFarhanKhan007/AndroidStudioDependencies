@@ -74,7 +74,7 @@ plugins{
 . . .
 
  id 'kotlin-kapt'
- 
+  id 'com.google.devtools.ksp' version "1.8.21-1.0.11"
  }
 
  dependencies{
