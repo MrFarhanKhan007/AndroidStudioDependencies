@@ -97,3 +97,6 @@ plugins{
     
     // if you dont wish to use kapt,just use ksp, refer to https://developer.android.com/build/optimize-your-build?utm_source=android-studio#migrate_to_ksp
  }
+
+     ## NAVIGATION
+        implementation("androidx.navigation:navigation-compose:2.7.6")
