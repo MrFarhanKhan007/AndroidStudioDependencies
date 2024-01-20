@@ -5,13 +5,22 @@
 
 dependencies{
 
-. . . 
+. . . </br>
+        val lifecycle_version = "2.7.0"
+        
+    // ViewModel
+        implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+        // ViewModel utilities for Compose
+        implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
+        // LiveData
+        implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+        // Lifecycles only (without ViewModel or LiveData)
+        implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
+        // Lifecycle utilities for Compose
+        implementation("androidx.lifecycle:lifecycle-runtime-compose:$lifecycle_version")
 
-// ViewModel
-    
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.2" 
-    
-    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2"
+        // Saved state module for ViewModel
+        implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version")
     
  
 }
@@ -52,13 +61,13 @@ plugins{
 
 <manifest
 
-   <uses-permission @ndroid:name="android.permission.INTERNET" />  [replace @ with a , and it will be good to go, it wasn't letting me write the android name]
+   <uses-permission @ndroid:name="android.permission.INTERNET" />  [replace @ with a , and it will be good to go, it wasn't letting me write the Android name]
 
 2) set the application name
 
 <application 
 
-// for example application name is AmphibiansApplication and it in ui package, we write it as ->
+//For example, the application name is AmphibiansApplication and in ui package, we write it as ->
 
 android:name=".ui.AmphibianApplication"
 
