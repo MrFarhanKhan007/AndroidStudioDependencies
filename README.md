@@ -29,15 +29,15 @@ dependencies{
 
 plugins{ 
 
-...
+.        ..
 
- id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.21'
+         id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.21'
 
- }
+         }
 
- dependencies{
+         dependencies{
 
- . . .
+         . . .
 
 // Retrofit
     
@@ -54,32 +54,45 @@ plugins{
     testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1'
 
 
- }
+         }
 
  in ANDROID MANIFEST FILE->
 1) set permission for INTERNET USAGE
 
-<manifest
+        <manifest
 
-   <uses-permission @ndroid:name="android.permission.INTERNET" />  [replace @ with a , and it will be good to go, it wasn't letting me write the Android name]
+           <uses-permission @ndroid:name="android.permission.INTERNET" />  [replace @ with a , and it will be good to go, it wasn't letting me write the Android name]
 
 2) set the application name
 
-<application 
+        <application 
 
-//For example, the application name is AmphibiansApplication and in ui package, we write it as ->
+        //For example, the application name is AmphibiansApplication and in ui package, we write it as ->
 
-android:name=".ui.AmphibianApplication"
+        android:name=".ui.AmphibianApplication"
 
-. . .
+        . . .
 
-/application>
+            /application>
 
-</manifest>
+            </manifest>
 
 ## Room Library
 
-dependencies {
+    plugins{ //project level
+
+    id("com.google.devtools.ksp") version "1.9.22-1.0.17" apply false
+
+    }
+
+    plugins{ //app level
+
+    id("com.google.devtools.ksp")
+
+    }
+
+    dependencies {
+
     val room_version = "2.6.1"
 
     implementation("androidx.room:room-runtime:$room_version")
@@ -108,5 +121,6 @@ dependencies {
     // optional - Paging 3 Integration
     implementation("androidx.room:room-paging:$room_version")
 }
-     ## NAVIGATION
+
+## NAVIGATION
         implementation("androidx.navigation:navigation-compose:2.7.6")
