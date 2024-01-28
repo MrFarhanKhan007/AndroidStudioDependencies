@@ -103,7 +103,24 @@ in ANDROID MANIFEST FILE->
         implementation("androidx.navigation:navigation-compose:2.7.6")
 
 ## Hilt and Dagger
-
         implementation("com.google.dagger:hilt-android:2.44")
         ksp("com.google.dagger:hilt-android-compiler:2.44")
         ksp("com.google.dagger:dagger-compiler:2.44")
+
+## Glide
+
+in Top Level build.gradle
+        
+        repositories {
+          google()
+          mavenCentral()
+        }
+
+in :app build.grade
+
+        implementation ("com.github.bumptech.glide:glide:4.11.0")
+        ksp ("com.github.bumptech.glide:compiler:4.11.0")
+
+        testImplementation("junit:junit:4.13.2")
+        androidTestImplementation("androidx.test.ext:junit:1.1.5")
+        androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
