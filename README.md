@@ -1,5 +1,5 @@
 # AndroidStudioDependencies
-
+All your Android dependencies at one place!
 
 ## Viewmodel
 
