@@ -103,9 +103,9 @@ in ANDROID MANIFEST FILE->
         implementation("androidx.navigation:navigation-compose:2.7.6")
 
 ## Hilt and Dagger
-        implementation("com.google.dagger:hilt-android:2.44")
-        ksp("com.google.dagger:hilt-android-compiler:2.44")
-        ksp("com.google.dagger:dagger-compiler:2.44")
+        implementation("com.google.dagger:hilt-android:2.50")
+        ksp("com.google.dagger:hilt-android-compiler:2.50")
+        ksp("com.google.dagger:dagger-compiler:2.50")
 
 ## Glide
 
