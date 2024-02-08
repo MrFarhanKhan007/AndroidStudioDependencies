@@ -125,3 +125,25 @@ in :app build.grade
         testImplementation("junit:junit:4.13.2")
         androidTestImplementation("androidx.test.ext:junit:1.1.5")
         androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+
+## Realm Database
+in Top Level build.gradle
+
+        plugins{
+           id 'io.realm.kotlin' version '1.11.0' apply false
+
+        }
+
+in :app build.grade
+
+        plugins{
+          id 'io.realm.kotlin'
+        }
+        
+        dependencies{
+        implementation 'io.realm.kotlin:library-base:1.11.0'
+        implementation 'io.realm.kotlin:library-sync:1.11.0'// If using Device Sync
+        implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0' // If using coroutines with the SDK        
+        }
+
