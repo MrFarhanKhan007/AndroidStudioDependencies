@@ -103,6 +103,16 @@ in ANDROID MANIFEST FILE->
         implementation("androidx.navigation:navigation-compose:2.7.6")
 
 ## Hilt and Dagger
+
+in Top Level build.gradle
+
+        plugins{ 
+        id("com.google.devtools.ksp") version "1.9.22-1.0.17" apply false
+        id("com.google.dagger.hilt.android") version "2.50" apply false
+        plugins}
+
+in :app build.grade
+
         implementation("com.google.dagger:hilt-android:2.50")
         implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
         ksp("com.google.dagger:hilt-android-compiler:2.50")
@@ -117,7 +127,7 @@ in Top Level build.gradle
           mavenCentral()
         }
 
-in :app build.grade
+in :app build.gradel
 
         implementation ("com.github.bumptech.glide:glide:4.11.0")
         ksp ("com.github.bumptech.glide:compiler:4.11.0")
