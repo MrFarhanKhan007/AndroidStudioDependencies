@@ -164,7 +164,6 @@ in :app build.grade
 
 ## Koin
         compile "io.insert-koin:koin-core:$koin_version"
-        implementation "io.insert-koin:koin-androidx-workmanager:$koin_android_version"
         
         // Navigation Graph
         implementation "io.insert-koin:koin-androidx-navigation:$koin_android_version"
@@ -186,4 +185,7 @@ in :app build.grade
         
         // Java Compatibility
         implementation "io.insert-koin:koin-android-compat:$koin_android_version"
+        
         // Jetpack WorkManager
+        implementation "io.insert-koin:koin-androidx-workmanager:$koin_android_version"
+
