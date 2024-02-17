@@ -162,3 +162,28 @@ in :app build.grade
         implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0' // If using coroutines with the SDK        
         }
 
+## Koin
+        compile "io.insert-koin:koin-core:$koin_version"
+        implementation "io.insert-koin:koin-androidx-workmanager:$koin_android_version"
+        
+        // Navigation Graph
+        implementation "io.insert-koin:koin-androidx-navigation:$koin_android_version"
+        
+        implementation "io.insert-koin:koin-androidx-compose:$koin_android_compose_version"
+        
+        // Koin for Ktor 
+        implementation "io.insert-koin:koin-ktor:$koin_ktor"
+
+         // Koin Test features
+        testImplementation "io.insert-koin:koin-test:$koin_version"
+        
+        // Koin for JUnit 4
+        testImplementation "io.insert-koin:koin-test-junit4:$koin_version"
+        
+        // Koin for JUnit 5
+        testImplementation "io.insert-koin:koin-test-junit5:$koin_version"
+        implementation "io.insert-koin:koin-android:$koin_android_version"
+        
+        // Java Compatibility
+        implementation "io.insert-koin:koin-android-compat:$koin_android_version"
+        // Jetpack WorkManager
