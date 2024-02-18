@@ -29,7 +29,7 @@ All your Android dependencies at one place! [all versions are up-to-date]
 
         ...
         
-         id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.21'
+        id ("org.jetbrains.kotlin.plugin.serialization") version "1.9.22" apply false
 
          }
 
