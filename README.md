@@ -164,18 +164,20 @@ in :app build.grade
         }
 
 ## Koin
-        compile "io.insert-koin:koin-core:$koin_version"
         
-        // Navigation Graph
-        implementation "io.insert-koin:koin-androidx-navigation:$koin_android_version"
-        
-        implementation "io.insert-koin:koin-androidx-compose:$koin_android_compose_version"
-        
-        // Koin for Ktor 
-        implementation "io.insert-koin:koin-ktor:$koin_ktor"
+        val koin_version="3.5.3"
+        implementation ("io.insert-koin:koin-core:$koin_version")
 
-         // Koin Test features
-        testImplementation "io.insert-koin:koin-test:$koin_version"
+        // Navigation Graph
+        implementation ("io.insert-koin:koin-androidx-navigation:$koin_version")
+
+        implementation ("io.insert-koin:koin-androidx-compose:$koin_version")
+
+        // Koin for Ktor
+        implementation ("io.insert-koin:koin-ktor:$koin_version")
+
+        // Koin Test features
+        testImplementation ("io.insert-koin:koin-test:$koin_version")
         
         // Koin for JUnit 4
         testImplementation "io.insert-koin:koin-test-junit4:$koin_version"
