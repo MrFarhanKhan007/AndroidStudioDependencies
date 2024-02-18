@@ -39,17 +39,18 @@ All your Android dependencies at one place! [all versions are up-to-date]
 
         // Retrofit
     
-        implementation "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0" 
-    
-        implementation "com.squareup.retrofit2:retrofit:2.9.0"
-    
-        implementation "io.coil-kt:coil-compose:2.4.0"
-    
-        implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0"
+        implementation ("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
 
-        testImplementation 'junit:junit:4.13.2'
-    
-        testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1'
+        implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+
+        implementation ("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
+
+        testImplementation ("junit:junit:4.13.2")
+
+        testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+
+        //coil
+        implementation ("io.coil-kt:coil-compose:2.5.0")
 
          }
 
